@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage --runInBand",
+    "test:watch": "jest --coverage --runInBand --watch",
     "build": "webpack"
   },
   "repository": {
@@ -23,6 +24,11 @@
   },
   "homepage": "https://github.com/colinhowe/js-dice-codes#readme",
   "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "babel-jest": "^24.7.1",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "jest": "^24.5.0",
     "jest-junit": "^6.3.0",
     "webpack": "^4.29.6",
