@@ -58,3 +58,10 @@ describe('Error handling', () => {
     expect(badInput).toThrow(' Invalid character + at position 0 in +')
   })
 })
+
+describe('Drops spaces', () => {
+  testParsing('5', [{ constant: 5 }])
+  testParsing('1d6 + 5', [{ die: 6, quantity: 1 }, { constant: 5 }])
+  testParsing('5  + 1d6', [{ constant: 5 }, { die: 6, quantity: 1 }])
+  testParsing('  1d6 + 5  ', [{ die: 6, quantity: 1 }, { constant: 5 }])
+})

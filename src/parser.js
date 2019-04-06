@@ -2,8 +2,18 @@ const makeStringHandler = (s) => {
   let currentPos = 0;
 
   return {
-    peek: () => s[currentPos],
-    next: () => { currentPos += 1 },
+    peek: () => {
+      while (s[currentPos] == ' ') {
+        currentPos += 1;
+      }
+      return s[currentPos];
+    },
+    next: () => {
+      currentPos += 1
+      while (s[currentPos] == ' ') {
+        currentPos += 1;
+      }
+    },
     empty: () => currentPos == s.length,
     pos: () => currentPos,
     all: () => s,
