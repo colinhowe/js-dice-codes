@@ -1,4 +1,4 @@
-import { parseDiceCode } from './index';
+import { parseDiceCode } from './parser';
 
 const testParsing = (code, expected) => test(
   code, () => expect(parseDiceCode(code)).toEqual(expected)
