@@ -1,7 +1,9 @@
-# js-dice-codes
+# js-dice-codes [![CircleCI](https://circleci.com/gh/colinhowe/js-dice-codes.svg?style=svg)](https://circleci.com/gh/colinhowe/js-dice-codes) [![codecov](https://codecov.io/gh/colinhowe/js-dice-codes/branch/master/graph/badge.svg)](https://codecov.io/gh/colinhowe/js-dice-codes)
 
-Build: [![CircleCI](https://circleci.com/gh/colinhowe/js-dice-codes.svg?style=svg)](https://circleci.com/gh/colinhowe/js-dice-codes)
-Coverage: [![codecov](https://codecov.io/gh/colinhowe/js-dice-codes/branch/master/graph/badge.svg)](https://codecov.io/gh/colinhowe/js-dice-codes)
+# Overview
+
+A dice code parser and roller. Takes dice codes of the form `1d6 + 1d8 + 4` and
+outputs the result as well as the roll of each dice.
 
 # Usage
 
