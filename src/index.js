@@ -1,3 +1,6 @@
 import { parseDiceCode } from './parser';
+import roll from './roller';
 
-export { parseDiceCode };
+const rollDiceCode = (code) => roll(parseDiceCode(code));
+
+export default rollDiceCode; 
