@@ -1,8 +1,8 @@
 {
   "name": "js-dice-codes",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A JS library for parsing dice codes and executing them",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
   "files": [
     "dist/*"
   ],

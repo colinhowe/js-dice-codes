@@ -4,14 +4,18 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    library: 'jsDiceCodes',
+    libraryExport: 'default',
+    libraryTarget: 'umd',
+    globalObject: `(typeof self !== 'undefined' ? self : this)`
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        query: {
+        options: {
           presets: ['@babel/preset-env']
         }
       }
