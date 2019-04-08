@@ -21,6 +21,14 @@ describe('Test multi-shaped roll', () => {
     const result = roll([{ die: 6, quantity: 1 }, { die: 10, quantity: 1 }]);
     expect(result).toEqual({ result: 7, breakdown: [6, 1] });
   });
+
+  it('1d6-1d10-1', () => {
+    mockRandom([0.999, 0]);
+    const result = roll(
+      [{ die: 6, quantity: 1 }, { die: 10, quantity: -1 }, { constant: -1 }]);
+    expect(result).toEqual({ result: 4, breakdown: [6, -1, -1] });
+  });
+
 });
 
 describe('Test handles constants', () => {
